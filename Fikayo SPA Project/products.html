@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css">
+    <script src="fontawesome-free-6.1.1-web/js/all.js"></script>
+    <script src="jquery-3.6.0.js"></script>
+</head>
+    <style>
+            body{
+                background-color: rgb(21, 21, 21);
+            }
+            .container-fluid{
+                background-color: black;
+            }
+            .card-img-top{
+                height: 300px;
+                transition: transform .2s;
+            }
+            .card-img-top:hover{
+                -ms-transform: scale(1.1); /* IE 9 */
+                -webkit-transform: scale(1.1); /* Safari 3-8 */
+                 transform: scale(1.1);
+            }
+            .card-body{
+                background-color: dimgray;
+            }
+            #marquee{
+                color: white;
+            }
+    </style>
+<body>
+
+   <div class="row">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="media/images/Custom Air Force One Brown Color - Youth 4_5 _ Women's 6.jpg" style="width: 30%; height: 75vh;" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="media/images/nikeybens on Twitter.jpg" style="width: 30%; height: 75vh;" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="media/images/Nike Dunk Low SP White _ Red.jpg" style="width: 30%; height: 75vh;" class="d-block w-100" alt="...">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+   </div>
+
+   <div class="row">
+       <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+            <img src="media/images/airforce.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Nike Air Force 1</h5>
+            <p class="card-text">30,000 NGN</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+            <div class="container">
+                <i class="icon fa fa-star" aria-hidden="true" id="sta1"></i>  
+                <i class="icon fa fa-star" aria-hidden="true" id="sta2"></i>  
+                <i class="icon fa fa-star" aria-hidden="true" id="sta3"></i>  
+                <i class="icon fa fa-star" aria-hidden="true" id="sta4"></i>  
+                <i class="icon fa fa-star" aria-hidden="true" id="sta5"></i>  
+            </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#sta1").click(function(){
+                    $(".icon").css("color","black");
+                    $("#sta1").css("color","yellow");
+                });
+                $("#sta2").click(function(){
+                    $(".icon").css("color","black");
+                    $("#sta1, #sta2").css("color","yellow");
+                });
+                $("#sta3").click(function(){
+                    $(".icon").css("color","black");
+                    $("#sta1, #sta2, #sta3").css("color","yellow");
+                });
+                $("#sta4").click(function(){
+                    $(".icon").css("color","black");
+                    $("#sta1, #sta2, #sta3, #sta4").css("color","yellow");
+                });
+                $("#sta5").click(function(){
+                    $(".icon").css("color","black");
+                    $("#sta1, #sta2, #sta3, #sta4, #sta5").css("color","yellow");
+                });
+            });
+        </script>
+       </div>
+
+       <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+            <img src="media/images/Black Fashion Shoes.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Jordan 1s</h5>
+            <p class="card-text"> 45,000 NGN</p>
+            <a href="#" class="btn btn-primary">Add To Cart</a>
+
+            <div class="container">
+                <i class="icon1 fa fa-star" aria-hidden="true" id="stb1"></i>  
+                <i class="icon1 fa fa-star" aria-hidden="true" id="stb2"></i>  
+                <i class="icon1 fa fa-star" aria-hidden="true" id="stb3"></i>  
+                <i class="icon1 fa fa-star" aria-hidden="true" id="stb4"></i>  
+                <i class="icon1 fa fa-star" aria-hidden="true" id="stb5"></i>  
+            </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#stb1").click(function(){
+                    $(".icon1").css("color","black");
+                    $("#stb1").css("color","yellow");
+                });
+                $("#stb2").click(function(){
+                    $(".icon1").css("color","black");
+                    $("#stb1, #stb2").css("color","yellow");
+                });
+                $("#stb3").click(function(){
+                    $(".icon1").css("color","black");
+                    $("#stb1, #stb2, #stb3").css("color","yellow");
+                });
+
+                $("#stb4").click(function(){
+                    $(".icon1").css("color","black");
+                    $("#stb1, #stb2, #stb3, #stb4").css("color","yellow");
+                });
+                $("#stb5").click(function(){
+                    $(".icon1").css("color","black");
+                    $("#stb1, #stb2, #stb3, #stb4, #stb5").css("color","yellow");
+                });
+            });
+        </script>
+            </div>
+       
+
+       <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+           <img src="media/images/download (1).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Vans</h5>
+            <p class="card-text">25,000 NGN</p>
+            <a href="#" class="btn btn-primary">Add To Cart</a>
+            <div class="container">
+                <i class="icon2 fa fa-star" aria-hidden="true" id="stc1"></i>  
+                <i class="icon2 fa fa-star" aria-hidden="true" id="stc2"></i>  
+                <i class="icon2 fa fa-star" aria-hidden="true" id="stc3"></i>  
+                <i class="icon2 fa fa-star" aria-hidden="true" id="stc4"></i>  
+                <i class="icon2 fa fa-star" aria-hidden="true" id="stc5"></i>  
+            </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#stc1").click(function(){
+                    $(".icon2").css("color","black");
+                    $("#stc1").css("color","yellow");
+                });
+                $("#stc2").click(function(){
+                    $(".icon2").css("color","black");
+                    $("#stc1, #stc2").css("color","yellow");
+                });
+                $("#stc3").click(function(){
+                    $(".icon2").css("color","black");
+                    $("#stc1, #stc2, #stc3").css("color","yellow");
+                });
+
+                $("#stc4").click(function(){
+                    $(".icon2").css("color","black");
+                    $("#stc1, #stc2, #stc3, #stc4").css("color","yellow");
+                });
+                $("#stc5").click(function(){
+                    $(".icon2").css("color","black");
+                    $("#stc1, #stc2, #stc3, #stc4, #stc5").css("color","yellow");
+                });
+            });
+        </script>
+            </div>
+       
+
+       <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+            <img src="media/images/download (2).jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Chelsea Boots</h5>
+            <p class="card-text">50,000 NGN</p>
+            <a href="#" class="btn btn-primary">Add To Cart</a>
+            <div class="container">
+                <i class="icon3 fa fa-star" aria-hidden="true" id="std1"></i>  
+                <i class="icon3 fa fa-star" aria-hidden="true" id="std2"></i>  
+                <i class="icon3 fa fa-star" aria-hidden="true" id="std3"></i>  
+                <i class="icon3 fa fa-star" aria-hidden="true" id="std4"></i>  
+                <i class="icon3 fa fa-star" aria-hidden="true" id="std5"></i>  
+            </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#std1").click(function(){
+                    $(".icon3").css("color","black");
+                    $("#std1").css("color","yellow");
+                });
+                $("#std2").click(function(){
+                    $(".icon3").css("color","black");
+                    $("#std1, #std2").css("color","yellow");
+                });
+                $("#std3").click(function(){
+                    $(".icon3").css("color","black");
+                    $("#std1, #std2, #std3").css("color","yellow");
+                });
+
+                $("#std4").click(function(){
+                    $(".icon3").css("color","black");
+                    $("#std1, #std2, #std3, #std4").css("color","yellow");
+                });
+                $("#std5").click(function(){
+                    $(".icon3").css("color","black");
+                    $("#std1, #std2, #std3, #std4, #std5").css("color","yellow");
+                });
+            });
+        </script>
+            </div>
+        </div>
+
+   <div class="row">
+       <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+            <img src="media/images/Nike Dunk Low SP White _ Red.jpg"  class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Nike Air Max</h5>
+            <p class="card-text">30,000 NGN</p>
+            <a href="#" class="btn btn-primary">Add To Cart</a>
+            <div class="container">
+                <i class="icon4 fa fa-star" aria-hidden="true" id="ste1"></i>  
+                <i class="icon4 fa fa-star" aria-hidden="true" id="ste2"></i>  
+                <i class="icon4 fa fa-star" aria-hidden="true" id="ste3"></i>  
+                <i class="icon4 fa fa-star" aria-hidden="true" id="ste4"></i>  
+                <i class="icon4 fa fa-star" aria-hidden="true" id="ste5"></i>  
+            </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#st1").click(function(){
+                    $(".icon4").css("color","black");
+                    $("#ste1").css("color","yellow");
+                });
+                $("#st2").click(function(){
+                    $(".icon4").css("color","black");
+                    $("#ste1, #ste2").css("color","yellow");
+                });
+                $("#ste3").click(function(){
+                    $(".icon4").css("color","black");
+                    $("#ste1, #ste2, #ste3").css("color","yellow");
+                });
+
+                $("#ste4").click(function(){
+                    $(".icon4").css("color","black");
+                    $("#ste1, #ste2, #ste3, #ste4").css("color","yellow");
+                });
+                $("#ste5").click(function(){
+                    $(".icon4").css("color","black");
+                    $("#ste1, #ste2, #ste3, #ste4, #ste5").css("color","yellow");
+                });
+            });
+        </script>
+            </div>
+       
+       
+       <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+            <img src="media/images/femaleshoe.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Converse Sport</h5>
+            <p class="card-text">32,000 NGN</p>
+            <a href="#" class="btn btn-primary">Add To Cart</a>
+            <div class="container">
+                <i class="icon5 fa fa-star" aria-hidden="true" id="stf1"></i>  
+                <i class="icon5 fa fa-star" aria-hidden="true" id="stf2"></i>  
+                <i class="icon5 fa fa-star" aria-hidden="true" id="stf3"></i>  
+                <i class="icon5 fa fa-star" aria-hidden="true" id="stf4"></i>  
+                <i class="icon5 fa fa-star" aria-hidden="true" id="stf5"></i>  
+            </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#stf1").click(function(){
+                    $(".icon5").css("color","black");
+                    $("#stf1").css("color","yellow");
+                });
+                $("#stf2").click(function(){
+                    $(".icon5").css("color","black");
+                    $("#stf1, #stf2").css("color","yellow");
+                });
+                $("#stf3").click(function(){
+                    $(".icon5").css("color","black");
+                    $("#stf1, #stf2, #stf3").css("color","yellow");
+                });
+
+                $("#stf4").click(function(){
+                    $(".icon5").css("color","black");
+                    $("#stf1, #stf2, #stf3, #stf4").css("color","yellow");
+                });
+                $("#stf5").click(function(){
+                    $(".icon5").css("color","black");
+                    $("#stf1, #stf2, #stf3, #stf4, #stf5").css("color","yellow");
+                });
+            });
+        </script>
+            </div>
+        
+
+       <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+            <img src="media/images/Ice Boy.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Nike Air 270</h5>
+            <p class="card-text">35,000 NGN</p>
+            <a href="#" class="btn btn-primary">Add To Cart</a>
+            <div class="container">
+                <i class="icon6 fa fa-star" aria-hidden="true" id="stg1"></i>  
+                <i class="icon6 fa fa-star" aria-hidden="true" id="stg2"></i>  
+                <i class="icon6 fa fa-star" aria-hidden="true" id="stg3"></i>  
+                <i class="icon6 fa fa-star" aria-hidden="true" id="stg4"></i>  
+                <i class="icon6 fa fa-star" aria-hidden="true" id="stg5"></i>  
+            </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#stg1").click(function(){
+                    $(".icon6").css("color","black");
+                    $("#stg1").css("color","yellow");
+                });
+                $("#stg2").click(function(){
+                    $(".icon6").css("color","black");
+                    $("#stg1, #stg2").css("color","yellow");
+                });
+                $("#stg3").click(function(){
+                    $(".icon6").css("color","black");
+                    $("#stg1, #stg2, #stg3").css("color","yellow");
+                });
+
+                $("#stg4").click(function(){
+                    $(".icon6").css("color","black");
+                    $("#stg1, #stg2, #stg3, #stg4").css("color","yellow");
+                });
+                $("#stg5").click(function(){
+                    $(".icon6").css("color","black");
+                    $("#stg1, #stg2, #stg3, #stg4, #stg5").css("color","yellow");
+                });
+            });
+        </script>
+            </div>
+        
+
+       <div class="col-sm-3">
+        <div class="card" style="width: 18rem;">
+            <img src="media/images/dior.png" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Nike Dior 1s</h5>
+            <p class="card-text">75,000 NGN</p>
+            <a href="#" class="btn btn-primary">Add To Cart</a>
+            <div class="container">
+                <i class="icon7 fa fa-star" aria-hidden="true" id="sth1"></i>  
+                <i class="icon7 fa fa-star" aria-hidden="true" id="sth2"></i>  
+                <i class="icon7 fa fa-star" aria-hidden="true" id="sth3"></i>  
+                <i class="icon7 fa fa-star" aria-hidden="true" id="sth4"></i>  
+                <i class="icon7 fa fa-star" aria-hidden="true" id="sth5"></i>  
+            </div>
+            </div>
+            
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $("#sth1").click(function(){
+                    $(".icon7").css("color","black");
+                    $("#sth1").css("color","yellow");
+                });
+                $("#sth2").click(function(){
+                    $(".icon7").css("color","black");
+                    $("#sth1, #sth2").css("color","yellow");
+                });
+                $("#sth3").click(function(){
+                    $(".icon7").css("color","black");
+                    $("#sth1, #sth2, #sth3").css("color","yellow");
+                });
+
+                $("#sth4").click(function(){
+                    $(".icon7").css("color","black");
+                    $("#sth1, #sth2, #sth3, #sth4").css("color","yellow");
+                });
+                $("#sth5").click(function(){
+                    $(".icon7").css("color","black");
+                    $("#sth1, #sth2, #sth3, #sth4, #sth5").css("color","yellow");
+                });
+            });
+        </script>
+
+    
+        <div id="marquee">
+            <marquee width="100%" direction="right" height="100%">
+                Property Of Fikayo Quadri
+            </marquee>
+        </div>
+    </div>
+
+    <div class="container" style="text-align: end;">
+        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook" style="height: 40px; width: 40px;"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram" style="height: 40px; width: 40px; color: orangered;"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter" style="height: 40px; width: 40px;"></i></a>
+        <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube" style="height: 40px; width: 40px; color: red;"></i></a>
+    </div>
+
+    <address style="color: white; ">
+        25 Ogunlana Drive, Lekki Phase One <br>
+        08077462190 <br>
+        Lagos, Nigeria <br>
+        fikayo&copy;2022
+    </address>
+    
+ 
+</body>
+</html>

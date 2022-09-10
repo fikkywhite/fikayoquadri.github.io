@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+   <style>
+    .header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('media/images/airforce.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+    .text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+     .container-fluid{
+        background-color: black;
+     }
+   </style>
+   <body ng-app="myApp">
+
+    <div class="row">
+        <div class="col-sm-12">
+         <nav class="navbar navbar-expand-lg bg-light navbar-dark">
+             <div class="container-fluid">
+               <a class="navbar-brand" href="#">
+               <img src="media/images/image_72192707.JPG" width="30" height="24" alt="">
+               FKW 
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                 <div class="navbar-nav">
+                   <a class="nav-link" href="#!main">Main</a>
+                   <a class="nav-link" href="#!products">Products</a>
+                   <a class="nav-link" href="#!about">About</a>
+                   <a class="nav-link" href="#!contact">Contact</a>
+                 </div>
+               </div>
+             </div>
+           </nav>
+     </div>
+    </div> 
+
+   <section class="header">
+        <div class="text-box">
+            <h1>Fikky White Shoe Hub</h1>
+            <p>You are welcome to Fikky White Shoe Hub, feel free to look at this website and know more <br> about us and our products. </p>
+            <a href="" class="hero-btn">Visit Us To Know More</a>
+
+        </div>
+   </section>
+        
+   <div ng-view></div>
+       
+        
+    <script>
+         var app = angular.module("myApp", ["ngRoute"]);
+             app.config(function($routeProvider) {
+            $routeProvider
+            .when("/main", {
+                templateUrl : "main.html"
+            })
+            .when("/products", {
+                templateUrl : "products.html"
+            })
+            .when("/about", {
+                templateUrl : "about.html"
+            })
+            .when("/contact", {
+                templateUrl : "contact.html"
+            })
+        });
+    </script>
+
+
+        
+      
+</body>
+</html>
